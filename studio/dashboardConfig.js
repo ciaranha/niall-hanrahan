@@ -18,16 +18,16 @@ export default {
                 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
-                  buildHookId: '',
+                  buildHookId: '5f12014832154c0273cd7623',
                   title: 'Sanity Studio',
-                  name: '',
-                  apiId: ''
+                  name: 'niall-hanrahan-studio',
+                  apiId: 'e53c7d2b-d707-40f8-97e5-ca782dd61409'
                 },
                 {
-                  buildHookId: '',
+                  buildHookId: '5f120148a7d0d401fdf90061',
                   title: 'Portfolio Website',
-                  name: '',
-                  apiId: ''
+                  name: 'niall-hanrahan',
+                  apiId: '936bf4ab-5e04-4252-a5b4-6d26ffead8f3'
                 }
               ]
             }
