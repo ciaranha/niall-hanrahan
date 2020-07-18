@@ -38,6 +38,12 @@ export default {
       of: [{type: 'projectMember'}]
     },
     {
+      title: 'Software',
+      name: 'software',
+      type: 'array',
+      of: [{type: 'string'}]
+    },
+    {
       name: 'startedAt',
       title: 'Started at',
       type: 'datetime'

@@ -77,6 +77,7 @@ export const query = graphql`
         }
         roles
       }
+      software
     }
   }
 `

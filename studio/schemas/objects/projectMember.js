@@ -17,10 +17,9 @@ export default {
       options: {
         layout: 'radio',
         list: [
-          {title: 'Designer', value: 'designer'},
-          {title: 'Developer', value: 'developer'},
-          {title: 'Editor', value: 'editor'},
-          {title: 'Manager', value: 'manager'}
+          {title: 'Design Lead', value: 'design-lead'},
+          {title: 'Structural Engineer', value: 'structural-engineer'},
+          {title: 'CAD operative', value: 'cad-operative'}
         ]
       }
     }
