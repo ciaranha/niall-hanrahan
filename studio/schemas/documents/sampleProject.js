@@ -70,6 +70,11 @@ export default {
       type: 'projectPortableText'
     },
     {
+      name: 'images',
+      title: 'Images',
+      type: 'projectPortableText'
+    },
+    {
       name: 'relatedProjects',
       title: 'Related projects',
       type: 'array',

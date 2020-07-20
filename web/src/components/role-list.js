@@ -8,7 +8,7 @@ import styles from './role-list.module.css'
 function RoleList ({items, title}) {
   return (
     <div className={styles.root}>
-      <h2 className={styles.headline}>{title}</h2>
+      <span className={styles.headline}>{title}</span>
       <ul className={styles.list}>
         {items.map(item => (
           <li key={item._key} className={styles.listItem}>
@@ -28,10 +28,10 @@ function RoleList ({items, title}) {
             </div>
             <div>
               <div>
-                <strong>{(item.person && item.person.name) || <em>Missing name</em>}</strong>
+                {(item.person && item.person.name) || <em>Missing name</em>}
               </div>
               {item.roles && (
-                <div>
+                <div className={styles.role}>
                   {item.roles.map((role, idx) => {
                     switch (true) {
                       case idx === 0:

@@ -49,6 +49,7 @@ export const query = graphql`
         current
       }
       _rawBody
+      _rawImages
       members {
         _key
         person {
