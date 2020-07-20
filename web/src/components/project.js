@@ -18,19 +18,6 @@ function Project (props) {
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
 
-            {props.mainImage && mainImage.asset && (
-              <div className={styles.mainImage}>
-                <img
-                  src={imageUrlFor(buildImageObj(mainImage))
-                    .width(1560)
-                    .height(Math.floor((9 / 16) * 1560))
-                    .fit('crop')
-                    .url()}
-                  alt={mainImage.alt}
-                />
-              </div>
-            )}
-
             <div className={styles.metaContent}>
               <div>
                 <div className={styles.label}>
@@ -76,6 +63,24 @@ function Project (props) {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </Container>
+      {props.mainImage && mainImage.asset && (
+          <div className={styles.mainImage}>
+            <img
+              src={imageUrlFor(buildImageObj(mainImage))
+                .width(1560)
+                .height(Math.floor((9 / 16) * 1560))
+                .fit('crop')
+                .url()}
+              alt={mainImage.alt}
+            />
+          </div>
+        )}
+      <Container>
+        <div className={styles.grid}>
+          <div className={styles.mainContent}>
 
             <div className={styles.projectMembers}>
               {members && members.length > 0 && <RoleList items={members} title='Project Team' />}

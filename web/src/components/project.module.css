@@ -5,14 +5,15 @@
 
 .title {
   composes: responsiveTitle1 from './typography.module.css';
-  margin: 4rem 0 4rem;
+  margin: 4rem 0 2rem;
 }
 
 .mainImage {
   position: relative;
   background: #eee;
   padding-bottom: calc(9 / 16 * 100%);
-  border: 1px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 
   @nest & img {
     position: absolute;
@@ -51,8 +52,25 @@
 
 .metaContent {
   display: flex;
-  margin: 0rem 0 0;
-  padding: 2rem 0 0;
+  margin: 0rem 0 1.5rem;
+  padding: 1rem 0 0;
+  flex-direction: column;
+
+  @media (--media-min-medium) {
+    flex-direction: row;
+  }
+}
+
+.projectMembers {
+  display: flex;
+  margin: -3.5rem 0 1rem;
+  padding: 0rem 0 2rem;
+  border-bottom: 1px solid #000;
+  flex-direction: column;
+
+  @media (--media-min-medium) {
+    flex-direction: row;
+  }
 }
 
 .publishedAt {
@@ -74,7 +92,13 @@
 }
 
 .metaContainer {
-  margin-left: 3rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+
+  @media (--media-min-medium) {
+    margin-left: 3rem;
+    margin-top: 0;
+  }
 }
 
 .label {
@@ -124,14 +148,6 @@
   font-weight: normal;
   text-transform: uppercase;
   color: var(--color-gray);
-}
-
-
-.projectMembers {
-  display: flex;
-  margin: 2rem 0 1rem;
-  padding: .2rem 0 2rem;
-  border-bottom: 1px solid #000;
 }
 
 .categoriesHeadline {
