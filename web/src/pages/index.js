@@ -17,7 +17,6 @@ export const query = graphql`
       title
       description
       keywords
-      blurb
     }
     projects: allSanitySampleProject(
       limit: 6
@@ -88,7 +87,10 @@ const IndexPage = props => {
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
-        {site.blurb}
+
+        <div class="restrict">
+          <p>{site.description}</p>
+        </div>
 
         {projectNodes && (
           <ProjectPreviewGrid

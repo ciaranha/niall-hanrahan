@@ -4,9 +4,9 @@ import Header from './header'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, nav}) => (
+const Layout = ({children, blurb, onHideNav, onShowNav, showNav, siteTitle, nav}) => (
   <>
-    <Header siteTitle={siteTitle} nav={nav} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+    <Header siteTitle={siteTitle} blurb={blurb} nav={nav} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>

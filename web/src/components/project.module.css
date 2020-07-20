@@ -5,12 +5,14 @@
 
 .title {
   composes: responsiveTitle1 from './typography.module.css';
+  margin: 4rem 0 4rem;
 }
 
 .mainImage {
   position: relative;
   background: #eee;
   padding-bottom: calc(9 / 16 * 100%);
+  border: 1px solid #000;
 
   @nest & img {
     position: absolute;
@@ -49,12 +51,12 @@
 
 .metaContent {
   display: flex;
-  margin: 4rem 0 0;
+  margin: 0rem 0 0;
+  padding: 2rem 0 0;
 }
 
 .publishedAt {
   composes: mono from './typography.module.css';
-  margin: 0rem 0 1rem;
 }
 
 .categories {
@@ -78,9 +80,9 @@
 .label {
   composes: mono from './typography.module.css';
   color: var(--color-gray);
+  text-transform: uppercase;
   margin-right: 4px;
   margin: 0 0 .5rem;
-  text-transform: uppercase;
 }
 
 .software {
@@ -111,11 +113,25 @@
 
 .body {
   margin: 4rem 0 1rem;
+  padding: 0;
+}
+
+.body h4 {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-small-size);
+  line-height: var(--font-base-line-height);
+  margin-top: 60px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--color-gray);
 }
 
 
 .projectMembers {
   display: flex;
+  margin: 2rem 0 1rem;
+  padding: .2rem 0 2rem;
+  border-bottom: 1px solid #000;
 }
 
 .categoriesHeadline {
@@ -125,7 +141,9 @@
 
 .relatedProjects {
   border-top: 1px solid var(--color-very-light-gray);
-  margin: 2rem 0 3rem;
+  margin: 2rem auto 3rem;
+  padding: 2rem auto 3rem;
+  max-width: 1080px;
 
   @nest & ul {
     list-style: none;
@@ -143,5 +161,5 @@
 
 .relatedProjectsHeadline {
   composes: base from './typography.module.css';
-  margin: 0.5rem 0 0;
+  margin: 2.5rem 0 0;
 }

@@ -17,6 +17,20 @@ function Project (props) {
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
+
+            {props.mainImage && mainImage.asset && (
+              <div className={styles.mainImage}>
+                <img
+                  src={imageUrlFor(buildImageObj(mainImage))
+                    .width(1560)
+                    .height(Math.floor((9 / 16) * 1560))
+                    .fit('crop')
+                    .url()}
+                  alt={mainImage.alt}
+                />
+              </div>
+            )}
+
             <div className={styles.metaContent}>
               <div>
                 <div className={styles.label}>
@@ -33,7 +47,7 @@ function Project (props) {
 
               <div className={styles.metaContainer}>
                 <div className={styles.label}>
-                  Categories
+                  Filed Under
                 </div>
                 {categories && categories.length > 0 && (
                   <div className={styles.categories}>
@@ -67,23 +81,6 @@ function Project (props) {
               {members && members.length > 0 && <RoleList items={members} title='Project Team' />}
             </div>
 
-            {relatedProjects && relatedProjects.length > 0 && (
-              <div className={styles.relatedProjects}>
-                <h3 className={styles.relatedProjectsHeadline}>Related projects</h3>
-                <ul>
-                  {relatedProjects.map(project => (
-                    <li key={`related_${project._id}`}>
-                      {project.slug ? (
-                        <Link to={`/project/${project.slug.current}`}>{project.title}</Link>
-                      ) : (
-                        <span>{project.title}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
             <div className={styles.body}>
               {_rawBody && <BlockContent blocks={_rawBody || []} />}
             </div>
@@ -91,6 +88,23 @@ function Project (props) {
         </div>
       </Container>
       {_rawImages && <BlockContent blocks={_rawImages || []} />}
+
+      {relatedProjects && relatedProjects.length > 0 && (
+        <div className={styles.relatedProjects}>
+          <h3 className={styles.relatedProjectsHeadline}>Related projects</h3>
+          <ul>
+            {relatedProjects.map(project => (
+              <li key={`related_${project._id}`}>
+                {project.slug ? (
+                  <Link to={`/project/${project.slug.current}`}>{project.title}</Link>
+                ) : (
+                  <span>{project.title}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </article>
   )
 }
