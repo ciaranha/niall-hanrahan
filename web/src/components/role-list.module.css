@@ -1,13 +1,13 @@
 @import '../styles/custom-properties.css';
 
 .root {
-  margin: 2rem 0 3rem;
+
 }
 
 .headline {
   composes: mono from './typography.module.css';
-  text-transform: uppercase;
   color: var(--color-gray);
+  text-transform: uppercase;
 }
 
 .list {

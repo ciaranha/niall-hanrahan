@@ -8,7 +8,8 @@
 .headline {
   composes: mono from './typography.module.css';
   text-transform: uppercase;
-  margin: 2rem 0;
+  margin: 4rem 0 2rem;
+  color: var(--color-gray);
 }
 
 .grid {
@@ -20,16 +21,21 @@
   grid-gap: 2em;
 
   @media (--media-min-small) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   @media (--media-min-medium) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+.card {
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
 .browseMoreNav {
-  composes: small from './typography.module.css';
+  composes: mono from './typography.module.css';
   margin-top: 1rem;
   text-align: right;
 

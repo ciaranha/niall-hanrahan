@@ -5,13 +5,14 @@
   --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-mono: 'Roboto Mono', monospace;
 
+  --color-primary: blue;
   --color-black: #202123;
   --color-dark-gray: #32373e;
   --color-gray: #697a90;
   --color-light-gray: #b4bcc7;
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
-  --color-accent: #156dff;
+  --color-accent: blue;
 
   /* Typography */
   --unit: 16;
@@ -30,4 +31,24 @@
   --font-title2-line-height: calc(33 / 24); /* 33px */
   --font-title1-size: calc(49 / var(--unit) * 1rem); /* 49px */
   --font-title1-line-height: calc(57 / 49); /* 57px */
+}
+
+h4 {
+  font-family: var(--font-family-mono);
+  color: var(--color-gray);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  margin-right: 4px;
+  letter-spacing: 0.7px;
+  margin: 0 0 .5rem;
+}
+
+.restrict {
+  margin: 2rem 0 0;
+  max-width: 720px;
+}
+
+.restrict p {
+  font-weight: 500;
 }

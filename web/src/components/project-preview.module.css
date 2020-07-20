@@ -5,13 +5,14 @@
 }
 
 .title {
-  composes: responsiveTitle1 from './typography.module.css';
+  composes: responsiveTitle2 from './typography.module.css';
 }
 
 .leadMediaThumb {
   position: relative;
   padding-bottom: 66.666%;
   background: #eee;
+  border-bottom: 1px #000 solid;
 
   @nest & img {
     position: absolute;
@@ -26,9 +27,13 @@
 .title {
   @media (hover: hover) {
     @nest .root:hover & {
-      text-decoration: underline;
+      color: var(--color-primary)
     }
   }
+}
+
+.cardContent {
+  padding: 8px 20px 16px;
 }
 
 .excerpt {

@@ -12,9 +12,10 @@
   max-width: 100%;
   padding: 1em;
   display: flex;
+  border-bottom: 1px solid #000;
 
   @media (--media-min-small) {
-    padding: 1.5em 1.5em;
+    padding: 1em 1em;
   }
 }
 
@@ -34,6 +35,11 @@
       }
     }
   }
+}
+
+.blurb {
+  color: var(--color-gray);
+  margin-left: 12px;
 }
 
 .toggleNavButton {

@@ -11,14 +11,14 @@ function ProjectPreviewGrid (props) {
       <ul className={styles.grid}>
         {props.nodes &&
           props.nodes.map(node => (
-            <li key={node.id}>
+            <li className={styles.card} key={node.id}>
               <ProjectPreview {...node} />
             </li>
           ))}
       </ul>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Browse more</Link>
+          <Link to={props.browseMoreHref}>View all →</Link>
         </div>
       )}
     </div>
