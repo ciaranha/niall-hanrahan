@@ -21,6 +21,12 @@ export default {
       description: 'Describe your portfolio for search engines and social media.'
     },
     {
+      name: 'blurb',
+      type: 'text',
+      title: 'About Blurb',
+      description: 'Describe your portfolio for search engines and social media.'
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
@@ -36,6 +42,12 @@ export default {
       description: 'Publish an author and set a reference to them here.',
       title: 'Author',
       to: [{type: 'person'}]
-    }
+    },
+    {
+      title: 'Nav',
+      name: 'nav',
+      type: 'array',
+      of: [{type: 'linkUrl'}]
+    },
   ]
 }

@@ -5,7 +5,7 @@ import {cn} from '../lib/helpers'
 
 import styles from './header.module.css'
 
-const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
+const Header = ({nav, onHideNav, onShowNav, showNav, siteTitle}) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
@@ -16,13 +16,17 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
         <Icon symbol='hamburger' />
       </button>
 
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
-        <ul>
-          <li>
-            <Link to='/archive/'>Archive</Link>
-          </li>
-        </ul>
-      </nav>
+      {nav && nav.length > 0 && (
+        <nav className={cn(styles.nav, showNav && styles.showNav)}>
+          <ul>
+            {nav.map(nav => (
+              <li key={nav._key}>
+                <a href={nav.url}>{nav.linkText}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   </div>
 )
